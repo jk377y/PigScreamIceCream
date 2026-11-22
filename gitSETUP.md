@@ -12,15 +12,11 @@ Use these steps **once** when setting up the project on your computer.
 
 ## 2. Set your Git name and email
 
-You need to set your Git environment variables for GitHub commits.
-
-Set your GIT username:
+Set your name and email so Git knows who is making the commits.
 
 ```
 git config --global user.name "Your Name"
 ```
-
-Set your GIT email:
 
 ```
 git config --global user.email "you@example.com"
@@ -52,7 +48,7 @@ Move your terminal to the project directory:
 cd PigScreamIceCream
 ```
 
-Assuming you are using VS Code (this will open VS Code in the directory your terminal is currently active)
+If you're using VS Code, this opens the project folder (this will open it from the directory your terminal is currently active). 
 
 ```
 code .

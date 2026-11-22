@@ -50,7 +50,7 @@ git status
 
 <br>
 
-## 4. Save your work with a commit (run this from the root directory, `git add .` adds additional complexity to the process that we can avoid for now)
+## 4. Save your work with a commit (`git add .` adds additional complexity to the process that we can avoid for now)
 
 ```
 git add -A
@@ -97,6 +97,10 @@ If GitHub asks you to sign in, follow the browser sign-in steps.
 
 Anyone on the team can review and merge an approved pull request. Don't push directly to `main`. Everyone will be pushing to their feature branch. We will do a 2 person approval process to merge your new feature(s) with main.
 
+---
+
+<br>
+
 ## 7. Start your next task
 
 After your branch has been merged, get the latest `main` before creating your next branch:
@@ -112,6 +116,10 @@ git pull --ff-only origin main
 ```
 
 Then repeat from Step 2 with a new branch name.
+
+---
+
+<br>
 
 ## Quick commands
 
