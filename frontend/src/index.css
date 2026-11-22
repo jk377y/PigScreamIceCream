@@ -1,0 +1,22 @@
+/* Cloud 9 Color Palette */
+:root {
+  --color-midnight-navy: #1F3864;
+  --color-cloud-blue: #2E75B6;
+  --color-horizon-blue: #9DC3E6;
+  --color-sky-mist: #DEEBF7;
+  --color-cloud-violet: #6B4FBB;
+  --color-amethyst: #4B2E9F;
+  --color-lavender-haze: #E9E3F8;
+  --color-fog: #F6F8FC;
+  --color-cloud-white: #FFFFFF;
+  --color-slate: #5B6B7F;
+}
+
+/* Global Application Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}

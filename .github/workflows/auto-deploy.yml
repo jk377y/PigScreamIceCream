@@ -1,0 +1,9 @@
+# This is a placeholder only.
+#
+# Pig Scream Ice Cream - CI/CD Pipeline
+#
+# TODO: Configure GitHub Actions workflow.
+# This workflow will eventually handle:
+# - Frontend build and deployment
+# - Backend deployment to AWS EC2
+#
