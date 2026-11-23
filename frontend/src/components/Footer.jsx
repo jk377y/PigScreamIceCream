@@ -1,6 +1,6 @@
 import logo from '../assets/logo.png'
 
-//! social media icons are visual placeholders only and intentionally don't link anywhere
+//! social media icons are visuals only and intentionally don't link anywhere
 const SOCIAL_ICONS = [
     {
         name: 'Discord',
@@ -76,7 +76,7 @@ const Footer = () => {
 
                 <span className="footer-divider" aria-hidden="true" />
 
-                <ul className="social-list" aria-label="Social media (coming soon)">
+                <ul className="social-list" aria-label="Social media">
                     {SOCIAL_ICONS.map((icon) => (
                         <li key={icon.name} className="social-icon" title={icon.name} aria-label={icon.name}>
                             {icon.svg}
