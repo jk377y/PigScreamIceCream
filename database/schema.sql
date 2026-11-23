@@ -1,6 +1,6 @@
 -- Drop all tables to reset the database
 -- Create the table schemas
--- These are examples only
+-- These are placeholder examples only
 
 -- Drop existing tables
 DROP TABLE IF EXISTS order_items;

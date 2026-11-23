@@ -1,5 +1,5 @@
 -- Insert data into the tables
--- These are examples only
+-- These are placeholder examples only
 
 -- Insert sample customers
 INSERT INTO customers (
