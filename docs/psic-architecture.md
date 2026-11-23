@@ -18,9 +18,9 @@ The application uses a React frontend, a Python FastAPI backend, and a PostgreSQ
 | Backend | Python | Server-side programming |
 | API Framework | FastAPI | REST API development |
 | Database | PostgreSQL | Store application data |
-| Database Hosting | Amazon RDS | Managed PostgreSQL database |
-| Backend Hosting | Amazon EC2 | Host the FastAPI application |
-| Cloud Platform | AWS | Application infrastructure |
+| Database Hosting | RDS | Managed PostgreSQL database |
+| Backend Hosting | EC2 | Host the FastAPI application |
+| Cloud Platform | S3 & CloudFront | Application infrastructure |
 | Version Control | Git / GitHub | Source code management |
 | CI/CD | GitHub Actions | Automated testing and deployment |
 
@@ -30,7 +30,7 @@ The application uses a React frontend, a Python FastAPI backend, and a PostgreSQ
 |---|---|
 | `frontend/` | React application and website assets |
 | `backend/` | Python FastAPI application |
-| `docs/` | Project documentation |
+| `docs/` | Project documentation, to be used to document ACTUAL implementations, not theoretical concepts. |
 | `.github/workflows/` | GitHub Actions CI/CD workflows |
 
 ## Application Workflow

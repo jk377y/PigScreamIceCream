@@ -1,0 +1,5 @@
+Any tools or libraries needed to be installed for the backend should be listed here.
+- add the version number for each also please.
+
+fastapi 
+uvicorn (if using Uvicorn as the ASGI server)
