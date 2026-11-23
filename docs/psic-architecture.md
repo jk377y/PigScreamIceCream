@@ -14,6 +14,6 @@
 
 ## Public access
 
-The team plans to use the default **CloudFront `cloudfront.net` HTTPS URL** for the website. No Application Load Balancer or custom ACM certificate configuration is planned.
+The team plans to use the default **CloudFront `cloudfront.net` HTTPS URL** for the website. No Application Load Balancer or custom ACM certificate configuration is required or planned.
 
 The specific API routing and deployment commands will be finalized during implementation. Do not treat unconfigured deployment details as complete.
