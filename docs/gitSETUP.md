@@ -1,86 +1,44 @@
 # Git Setup
 
-Use these steps **once** when setting up the project on your computer.
+Use this guide **once per computer** to configure Git and clone the repository. For day-to-day Git work, see [Git Workflow](gitWORKFLOW.md).
 
-## 1. Get ready
+## 1. Prepare Git and GitHub
 
-1. Install [Git](https://git-scm.com/downloads) if you don't already have it.
-2. Accept the GitHub invitation to the `PigScreamIceCream` repository in your email.
-3. Open **Git Bash** (Windows) or a terminal (Mac/Linux).
+1. Install [Git](https://git-scm.com/downloads) if needed.
+2. Accept your GitHub invitation to the `PigScreamIceCream` repository.
+3. Open Git Bash (Windows) or a terminal (Mac/Linux).
 
-<br>
+## 2. Set your Git identity
 
-## 2. Set your Git name and email
+Replace the sample values with your own name and email:
 
-Set your name and email so Git knows who is making the commits.
-
-```
+```bash
 git config --global user.name "Your Name"
-```
-
-```
 git config --global user.email "you@example.com"
 ```
 
-Examples:
-```
-git config --global user.name "James"
-git config --global user.email "jk377y@gmail.com"
-```
+You only need to set these values once per computer.
 
-You only need to do this once per computer.
+## 3. Clone the project
 
----
+Navigate to the folder where you want to store the project, then run:
 
-<br>
-
-## 3. Download the project
-
-Open Git Bash or your terminal in the folder where you want to keep the project. Then run:
-
-```
+```bash
 git clone https://github.com/jk377y/PigScreamIceCream.git
-```
-
-Move your terminal to the project directory:
-
-```
 cd PigScreamIceCream
 ```
 
-If you're using VS Code, this opens the project folder (this will open it from the directory your terminal is currently active). 
+To open the folder in VS Code (if installed):
 
-```
+```bash
 code .
 ```
 
----
+## 4. Verify the repository
 
-<br>
-
-## 4. Check the connection
-
-See the connection details:
-
-```
+```bash
 git remote -v
-```
-
-Verify that everything is good. 
-
-```
 git status
 ```
 
-Should result in somethign like:
-
-`On branch main`
-`Your branch is up to date with 'origin/main'.`
-
-`nothing to commit, working tree clean`
-
----
-
-**That's it.** Cloning automatically sets up the remote connection. You do **not** need to run `git init` or `git remote add origin`.
-
-For all other Git commands, see [gitWORKFLOW.md](gitWORKFLOW.md).
+You should see the GitHub remote and a clean working tree on the checked-out branch. **Do not run `git init` or `git remote add origin`** after cloning.

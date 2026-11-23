@@ -1,58 +1,17 @@
-# API Documentation
+# API Endpoint Documentation
 
-*---Subject to change---*
+Record **implemented** FastAPI endpoints here as they are created. Harshini can expand or reorganize this reference to match the backend she develops. Do not list proposed routes as though they already exist.
 
-## Overview
+## Current endpoints
 
-The application uses Python and FastAPI to provide REST API endpoints for the React frontend.
+| Method | Path | Purpose | Request | Successful response |
+|---|---|---|---|---|
+| `GET` | `/health` | Check whether the API is running | None | `200 OK` with `{"status": "ok"}` |
 
-The API communicates with a PostgreSQL database hosted on Amazon RDS.
+The health-check endpoint is currently defined in `backend/main.py`.
 
-## API Technology Stack
+## Documenting new endpoints
 
-| Component | Technology | Purpose |
-|---|---|---|
-| Language | Python | Backend programming |
-| Framework | FastAPI | Create REST API endpoints |
-| Server | Uvicorn | Run the FastAPI application |
-| Database | PostgreSQL | Store application data |
-| Database Hosting | Amazon RDS | Managed database hosting |
-| Data Format | JSON | Exchange data with React |
-| Protocol | HTTP/HTTPS | Frontend/backend communication |
+For each endpoint added, record its **method, path, purpose, expected request, and response** in the table above. Where useful, add a separate section showing example JSON and error responses.
 
-## API Endpoints
-
-The following table will be updated as endpoints are developed.
-
-| Method | Endpoint | Purpose | Status |
-|---|---|---|---|
-| GET | `/health` | Verify backend availability | Starter endpoint |
-| TBD | TBD | Retrieve ice cream products | Planned |
-| TBD | TBD | Submit customer orders | Planned |
-| TBD | TBD | Retrieve order information | Planned |
-
-Endpoint paths and HTTP methods will be finalized during backend development.
-
-## Request and Response Format
-
-API requests and responses will use JSON where applicable.
-
-Example health-check response:
-
-```
-{
-  "status": "ok"
-}
-```
-
-Additional examples will be documented as endpoints are implemented.
-
-## Development Notes
-
-- Backend application entry point: `backend/main.py`
-- API endpoints will be developed using FastAPI.
-- Database credentials will not be committed to Git.
-- The React frontend will communicate with the FastAPI backend through CloudFront using HTTPS in production. Local development may use HTTP.
-- FastAPI's interactive API documentation will be available at `/docs` when the server is running.
-
-**Status:** Initial API structure established. Endpoint development pending.
+Only document behavior that matches the implemented code. API design and route names are left to the backend developer and team.

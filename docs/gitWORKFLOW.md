@@ -1,134 +1,68 @@
 # Git Workflow
 
-Use this guide whenever you're working on the project. **Do your work on a feature branch, not on `main`.**
+Follow this process for your regular project work. **Do not make changes directly on `main`.** For initial cloning and Git setup, see [Git Setup](gitSETUP.md).
 
-<br>
+## 1. Update `main`
 
-## 1. Get the latest version of the main branch
+Run these commands from the repository root before starting a new task:
 
-Open a terminal in the `PigScreamIceCream` folder.
-
-```
+```bash
 git switch main
-```
-
-Then:
-
-```
 git pull --ff-only origin main
 ```
 
----
+## 2. Create your own branch
 
-<br>
+Use a short, descriptive name:
 
-## 2. Create a feature branch when working on a new feature
-
-Give the branch a short name that describes your work. Replace `feature-name` with your own name and feature.
-
-```
+```bash
 git switch -c feature/feature-name
 ```
 
-Example: 
+Example: `feature/bliss-cart`
 
-```
-git switch -c feature/bliss-cart
-```
+## 3. Make and review changes
 
-<br>
+Edit the files for your assignment, then check what changed:
 
-## 3. Make your changes
-
-Edit your files in VS Code (or your preferred editor), then check what changed:
-
-```
+```bash
 git status
 ```
 
----
+## 4. Commit your changes
 
-<br>
+From the repository root, stage the changes you intend to commit:
 
-## 4. Save your work with a commit (`git add .` adds additional complexity to the process that we can avoid for now)
-
-```
+```bash
 git add -A
+git status
 ```
 
-Commit the changes (change the message to describe what you did).
+Make sure nothing unrelated or sensitive is staged, then commit:
 
+```bash
+git commit -m "Describe the change"
 ```
-git commit -m "Added shopping cart feature"
-```
 
+## 5. Push your branch
 
----
+For the first push of a new branch, replace the example branch name with yours:
 
-<br>
-
-## 5. Push your branch to GitHub
-
-**FIRST TIME push of a new branch:**
-
-```
+```bash
 git push -u origin feature/feature-name
 ```
 
-Remember to use your actual branch name. **After the first push**, you can just run:
-
-```
-git push
-```
-
-If GitHub asks you to sign in, follow the browser sign-in steps.
-
----
-
-<br>
+After that, use `git push` for additional commits on the same branch.
 
 ## 6. Open a pull request
 
-1. Open [the repository on GitHub](https://github.com/jk377y/PigScreamIceCream).
-2. Go to **Pull requests** and click **New pull request**.
-3. Set **base** to `main` and **compare** to your feature branch.
-4. Create the pull request and describe your changes.
-5. Wait for **two approvals** before merging.
+1. Open the [GitHub repository](https://github.com/jk377y/PigScreamIceCream) and select **Pull requests → New pull request**.
+2. Set **base** to `main` and **compare** to your feature branch.
+3. Describe the changes and request team review.
+4. Wait for **two approvals** before merging into `main`.
 
-Anyone on the team can review and merge an approved pull request. Don't push directly to `main`. Everyone will be pushing to their feature branch. We will do a 2 person approval process to merge your new feature(s) with main.
+Anyone on the team may review and merge an approved pull request. Never push directly to `main`.
 
----
+## 7. Start the next task
 
-<br>
-
-## 7. Start your next task
-
-After your branch has been merged, get the latest `main` before creating your next branch:
-
-```
-git switch main
-```
-
-Pull the main branch again so your local computer is updated:
-
-```
-git pull --ff-only origin main
-```
-
-Then repeat from Step 2 with a new branch name.
-
----
-
-<br>
-
-## Quick commands
-
-| Command | What it does |
-| --- | --- |
-| `git status` | See your branch and changed files |
-| `git branch` | List your local branches |
-| `git switch main` | Switch to `main` |
-| `git pull --ff-only origin main` | Update your local `main` |
-| `git add -A` | Stage changed files (run from root location in the terminal)|
-| `git commit -m "message"` | Commit staged changes |
-| `git push` | Push commits on a tracked branch |
+Once your pull request is merged, return to Step 1 to update `main` and create a fresh branch for the next task.

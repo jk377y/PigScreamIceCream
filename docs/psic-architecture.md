@@ -1,49 +1,19 @@
 # Project Architecture
 
-*---Subject to change---*
+*Intended technology stack and deployment plan. Update this document when the team changes either one.*
 
-## Overview
+## Stack and deployment
 
-Pig Scream Ice Cream is a full-stack web application that allows customers to browse ice cream products and place orders.
-
-The application uses a React frontend, a Python FastAPI backend, and a PostgreSQL database hosted on AWS.
-
-## Technology Stack
-
-| Component | Technology | Purpose |
+| Component | Technology | Intended deployment / use |
 |---|---|---|
-| Frontend | React | User interface |
-| Build Tool | Vite | Frontend development and builds |
-| Languages | JavaScript, HTML, CSS | Frontend development |
-| Backend | Python | Server-side programming |
-| API Framework | FastAPI | REST API development |
-| Database | PostgreSQL | Store application data |
-| Database Hosting | RDS | Managed PostgreSQL database |
-| Backend Hosting | EC2 | Host the FastAPI application |
-| Cloud Platform | S3 & CloudFront | Application infrastructure |
-| Version Control | Git / GitHub | Source code management |
-| CI/CD | GitHub Actions | Automated testing and deployment |
+| Frontend | React, Vite, JavaScript, HTML, CSS | Build the frontend and serve its static files from **Amazon S3 through CloudFront** |
+| Backend / API | Python, FastAPI | Run the API on **Amazon EC2** |
+| Database | PostgreSQL | Host the database on **Amazon RDS** |
+| Source control | Git, GitHub | Maintain the shared repository |
+| CI/CD | GitHub Actions | Automate builds/deployments when the workflow is implemented; `.github/workflows/auto-deploy.yml` is currently a placeholder |
 
-## Project Structure
+## Public access
 
-| Directory | Purpose |
-|---|---|
-| `frontend/` | React application and website assets |
-| `backend/` | Python FastAPI application |
-| `docs/` | Project documentation, to be used to document ACTUAL implementations, not theoretical concepts. |
-| `.github/workflows/` | GitHub Actions CI/CD workflows |
+The team plans to use the default **CloudFront `cloudfront.net` HTTPS URL** for the website. No Application Load Balancer or custom ACM certificate configuration is planned.
 
-## Application Workflow
-
-1. Customers interact with the React frontend.
-2. React sends HTTP requests to the FastAPI backend.
-3. FastAPI processes requests and communicates with PostgreSQL.
-4. PostgreSQL stores and retrieves application data.
-5. FastAPI returns JSON responses to React.
-6. React updates the interface with the returned data.
-
-## Deployment
-
-The application will use AWS infrastructure, including EC2 for the backend and RDS for PostgreSQL. GitHub Actions will eventually automate deployment.
-
-**Status:** Initial architecture established. Implementation and deployment are in progress.
+The specific API routing and deployment commands will be finalized during implementation. Do not treat unconfigured deployment details as complete.
