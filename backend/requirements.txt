@@ -1,9 +1,17 @@
-====================================================================================
-THIS SECTION IS TEMPORARY
-Delete this section once you have added all the dependencies.
-Any tools or libraries needed to be installed for the backend should be listed here.
-Add the version number for each also please.
-====================================================================================
+# ============================================================
+# Pig Scream Ice Cream - Backend Dependencies
+# ============================================================
+#
+# Add all Python packages required by the backend below.
+# Include version numbers once dependencies are finalized.
+#
+# Install dependencies using:
+# pip install -r requirements.txt
+#
+# ============================================================
 
-fastapi 
-uvicorn (if using Uvicorn as the ASGI server)
+# FastAPI - Backend API framework
+fastapi
+
+# Uvicorn - ASGI server for running FastAPI
+uvicorn[standard]
